@@ -1,0 +1,78 @@
+% List a beamer structure I use often.
+
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  % this theme save more space, and use red corlor
+  \usetheme{CambridgeUS}
+  \usecolortheme{beaver}
+  \usefonttheme{default}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+  \setbeamertemplate{itemize item}{\color{darkred}$\blacktriangleright$}
+  \setbeamertemplate{itemize subitem}[square]
+  \setbeamertemplate{itemize subsubitem}[square]
+  \setbeamertemplate{enumerate item}[square]
+  \setbeamertemplate{sections/subsections in toc}[square]
+  \setbeamercolor{section number projected}{bg=darkred,fg=white}
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{figures/}{symsimquality/}{adobe/}{modelcheck/}}
+
+% use natbib to control cite
+\usepackage[sort, numbers]{natbib}
+\bibliographystyle{unsrt}
+
+\usepackage{tikz}
+\usetikzlibrary{bayesnet}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\tikzset{>=latex}
+
+% show bold in math env.
+\usepackage{bm}
+
+\AtBeginSubsection[] {
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\title[abbr]{The TITLE}
+\author{YOUR NAME}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents[hideallsubsections]
+  % \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\subsection*{What to say}
+\section{Model}
+\subsection{A general framework}
+\section{Simulation}
+\section{Real data}
+\section{Discussion}
+\section*{Supplementary}
+\subsection*{Model inference} 
+\section{References}
+% allow multiple pages for reference
+\begin{frame}[allowframebreaks]
+  \bibliography{your.bib}
+\end{frame}
+\end{document}
