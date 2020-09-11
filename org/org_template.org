@@ -1,0 +1,39 @@
+#+TITLE: Org Mode Template
+#+AUTHOR: Who
+#+EMAIL: who@where.org
+#+DATE: 2222-02-22
+#+startup: latexpreview
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage{color}
+#+LANGUAGE: en
+#+OPTIONS: H:2 num:t toc:t
+
+
+#+BEGIN_abstract
+In this org document, I try to involve common elements in org-mode for quick reference later. A
+source org file will be exported as the pdf version. Especially, I am interested in:
+1. structured document
+2. project organization
+3. literate and reproducible programming
+#+END_abstract
+
+* Literate Programming
+Writing codes, is another kind of writing documents. Proper comments and good code organizaion make
+the coding itself a kind of compuational art. In this section, I will show how to connect org-mode
+with commonly used languages, such as *Lisp*, *R*, *Python*, and *C++*.
+
+** Lisp
+#+BEGIN_SRC emacs-lisp
+(message "Hello, Org-mode!")
+#+END_SRC
+Type "Ctrl-c Ctrl-c" to evaluate the source codes above.
+#+RESULTS:
+: Hello, Org-mode!
+
+** TODO Python
+** TODO R
+** TODO C++
+
+* NEXT Structured document
+* NEXT Project organization

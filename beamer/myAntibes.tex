@@ -1,0 +1,55 @@
+\documentclass[mathserif, fleqn]{beamer}
+\mode<presentation>{
+  \usetheme{Antibes}
+  \setbeamercovered{transparent}
+}
+
+\usepackage{beamerthemeshadow}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{color,xcolor}
+\usepackage{graphicx}
+\usepackage{multimedia}
+\usepackage{manfnt}
+\usepackage[english]{babel}
+\usepackage{algorithmic}
+\usepackage{setspace}
+\usepackage[timeinterval=1]{tdclock}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows}
+\usepackage{times}
+\usefonttheme[stillsanseriflarge]{serif}
+
+\beamertemplatesolidbackgroundcolor{white}
+\beamertemplatetransparentcovereddynamic
+\beamertemplateballitem
+\beamertemplatenumberedballsectiontoc
+
+\beamertemplateboldpartpage
+\setbeamertemplate{itemize item}[triangle]
+\setbeamertemplate{footline}[text line] {%
+\llap{Soooo\hspace{-5mm}}\centerline{\strut
+  Title}\llap{\insertframenumber\hspace{-5mm}}}
+
+% put figures in subdir
+\graphicspath{{./figures/}}
+
+\begin{document}
+\title{My TITLE}
+\author[s][soooo]
+\date[\initclock\tdtime]{\today}
+\frame[plain]{\titlepage}
+
+\frame{
+  \setbeamercolor{uppercol}{fg=white,bg=teal}
+  \begin{beamerboxesrounded}[upper=uppercol, shadow=true]{Outline}
+    \begin{spacing}{1.2}
+      \begin{itemize}
+      \item Background
+      \item Summary
+      \end{itemize}
+    \end{spacing}
+  \end{beamerboxesrounded}
+}
+
+\end{document}
